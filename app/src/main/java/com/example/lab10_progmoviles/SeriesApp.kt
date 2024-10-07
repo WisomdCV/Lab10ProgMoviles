@@ -37,7 +37,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 @Composable
 fun SeriesApp() {
-    val urlBase = "http://192.168.46.205/" // o tu IP si usarás un dispositivo externo
+    val urlBase = "http://192.168.46.205:8000/" // o tu IP si usarás un dispositivo externo
     val retrofit = Retrofit.Builder().baseUrl(urlBase)
         .addConverterFactory(GsonConverterFactory.create()).build()
     val servicio = retrofit.create(SerieApiService::class.java)
@@ -143,5 +143,6 @@ fun Contenido(
 
 @Composable
 fun ScreenInicio() {
-    TODO("Not yet implemented")
+    Text("Inicio de Wisom")
 }
+
